@@ -26,31 +26,35 @@ MVC(Model, View and Controller)
 
 ### API
 
-1. to add consumption
-POST /counter/callback
-{
-    "counter_id": "1",
-    "amount": 10000.123
+1. To add consumption <br />
+
+POST /counter/callback <br />
+{ <br />
+    "counter_id": "1", <br />
+    "amount": 10000.123<br />
+}<br />
+
+2. To get information additional information about the counter you have to call the following API:<br />
+
+GET /counter?id=1 <br />
+{ <br />
+    "id": "1",<br />
+    "village_name": "gurgaon"<br />
 }
 
-2. To get information additional information about the counter you have to call the following API:
-GET /counter?id=1
-{
-    "id": "1",
-    "village_name": "gurgaon"
-}
-3. To get the consumption report:
-GET /consumption_report?duration=24h
-{
-    "villages": [
-        {
-            "consumption": 400,
-            "villageName": "gurgaon"
-        },
-        {
-            "consumption": 800,
-            "villageName": "delhi"
-        }
-    ]
-} 
+3. To get the consumption report:<br />
+
+GET /consumption_report?duration=24h<br />
+{<br />
+    "villages": [<br />
+        {<br />
+            "consumption": 400,<br />
+            "villageName": "gurgaon"<br />
+        },<br />
+        {<br />
+            "consumption": 800,<br />
+            "villageName": "delhi"<br />
+        }<br />
+    ]<br />
+}<br /> 
 
